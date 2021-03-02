@@ -1135,6 +1135,7 @@ GameObject:
   - component: {fileID: 1266120108}
   - component: {fileID: 1266120107}
   - component: {fileID: 1266120110}
+  - component: {fileID: 1266120111}
   m_Layer: 5
   m_Name: tempCircleButton
   m_TagString: Untagged
@@ -1270,6 +1271,19 @@ MonoBehaviour:
   textRecBackground: {fileID: 1160286503}
   ActivityList: []
   transRectangle: {fileID: 582674262}
+--- !u!114 &1266120111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266120105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a25ad1e2087a04cef953f65a7604bcab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spinnerButton: {fileID: 1266120105}
 --- !u!1 &1640410313
 GameObject:
   m_ObjectHideFlags: 0
@@ -1881,8 +1895,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1033.6097, y: -1253}
-  m_SizeDelta: {x: 967.4116, y: 440.66522}
+  m_AnchoredPosition: {x: 1039, y: -1323}
+  m_SizeDelta: {x: 973.6279, y: 270.74866}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2025639797
 MonoBehaviour:
