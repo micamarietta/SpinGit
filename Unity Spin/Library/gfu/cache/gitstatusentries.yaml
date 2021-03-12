@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 995438498, guid: 68c7e4565cde54155bb78d8e935f1ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cacheType: 6
+  lastUpdatedAtString: 2021-03-11T17:21:11.464-08:00
+  initializedAtString: 2021-03-11T17:03:41.643-08:00
+  entries:
+  - path: Unity Spin/Assets/Scenes/SplashScreen.unity
+    fullPath: /Users/micamarietta/Documents/School/SE_302/GitHub/SpinGit/Unity Spin/Assets/Scenes/SplashScreen.unity
+    projectPath: Assets/Scenes/SplashScreen.unity
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Unity Spin/Assets/Scenes/SplashScreen.unity.meta
+    fullPath: /Users/micamarietta/Documents/School/SE_302/GitHub/SpinGit/Unity Spin/Assets/Scenes/SplashScreen.unity.meta
+    projectPath: Assets/Scenes/SplashScreen.unity.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Unity Spin/Library/Artifacts/82/82742b45dca465a36d49ba1de23ba781
+    fullPath: /Users/micamarietta/Documents/School/SE_302/GitHub/SpinGit/Unity Spin/Library/Artifacts/82/82742b45dca465a36d49ba1de23ba781
+    projectPath: Library/Artifacts/82/82742b45dca465a36d49ba1de23ba781
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Unity Spin/Library/gfu/cache/branches.yaml
+    fullPath: /Users/micamarietta/Documents/School/SE_302/GitHub/SpinGit/Unity Spin/Library/gfu/cache/branches.yaml
+    projectPath: Library/gfu/cache/branches.yaml
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Unity Spin/Library/gfu/cache/gitlog.yaml
+    fullPath: /Users/micamarietta/Documents/School/SE_302/GitHub/SpinGit/Unity Spin/Library/gfu/cache/gitlog.yaml
+    projectPath: Library/gfu/cache/gitlog.yaml
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Unity Spin/Library/gfu/cache/gitstatusentries.yaml
+    fullPath: /Users/micamarietta/Documents/School/SE_302/GitHub/SpinGit/Unity Spin/Library/gfu/cache/gitstatusentries.yaml
+    projectPath: Library/gfu/cache/gitstatusentries.yaml
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Unity Spin/Library/gfu/cache/gittrackingstatus.yaml
+    fullPath: /Users/micamarietta/Documents/School/SE_302/GitHub/SpinGit/Unity Spin/Library/gfu/cache/gittrackingstatus.yaml
+    projectPath: Library/gfu/cache/gittrackingstatus.yaml
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Unity Spin/Library/ScriptAssemblies/BuiltinAssemblies.stamp
+    fullPath: /Users/micamarietta/Documents/School/SE_302/GitHub/SpinGit/Unity Spin/Library/ScriptAssemblies/BuiltinAssemblies.stamp
+    projectPath: Library/ScriptAssemblies/BuiltinAssemblies.stamp
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1

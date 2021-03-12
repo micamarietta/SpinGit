@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
 
-    //testing github
+    //test
 
     public void LoadSplashScreen()
     {
