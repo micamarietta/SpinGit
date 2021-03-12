@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class SpinnerMechanics : MonoBehaviour
 {
+
+    //variables
     public Text DisplayActivity;
     public Text tapToExit;
     public GameObject textRecBackground;

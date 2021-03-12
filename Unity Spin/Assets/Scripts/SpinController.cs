@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class SpinController : MonoBehaviour
 {
-
+    //vars
     float rotSpeed = 0;
     public GameObject spinnerButton;
 
