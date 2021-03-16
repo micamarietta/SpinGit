@@ -21,7 +21,10 @@ public class SpinnerMechanics : MonoBehaviour
         textRecBackground.SetActive(false);
         transRectangle.gameObject.SetActive(false);
         CreateActivityList();
+
+
     }
+
 
     private void CreateActivityList()
     {
@@ -52,15 +55,21 @@ public class SpinnerMechanics : MonoBehaviour
         return ActivityList[randomIndex];
     }
 
-    public void OnSpinButtonClick()
+    public IEnumerator OnSpinButtonClickDelay() //change back to public void if doesn't work
     {
         string randomActivity = GetRandomActivity();
 
+
         //display rectangles and text
+        yield return new WaitForSeconds(3); //new line
         textRecBackground.SetActive(true);
         transRectangle.gameObject.SetActive(true);
         tapToExit.text = "Tap anywhere to exit";
         DisplayActivity.text = randomActivity;
+    }
+
+    public void OnSpinButtonClick(){
+      StartCoroutine(OnSpinButtonClickDelay());
     }
 
     //when the player clicks to exit out of their generated activity
