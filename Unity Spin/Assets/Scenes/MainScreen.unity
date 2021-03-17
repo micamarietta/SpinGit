@@ -1976,6 +1976,7 @@ GameObject:
   - component: {fileID: 1737757935}
   - component: {fileID: 1737757934}
   - component: {fileID: 1737757933}
+  - component: {fileID: 1737757936}
   m_Layer: 5
   m_Name: createListButton
   m_TagString: Untagged
@@ -2057,6 +2058,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1737757936}
+        m_MethodName: CreateSpinnerButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1737757934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2094,6 +2106,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737757931}
   m_CullTransparentMesh: 0
+--- !u!114 &1737757936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737757931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68e9a75caa6cf47719f8a027be350737, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 1722686808}
+  createButton: {fileID: 1737757933}
+  deleteButton: {fileID: 0}
+  editButton: {fileID: 0}
+  saveButton: {fileID: 0}
+  addActivityButton: {fileID: 0}
+  titleField: {fileID: 0}
+  activityField: {fileID: 0}
+  storedSpinnerTitles: []
 --- !u!1 &1777922298
 GameObject:
   m_ObjectHideFlags: 0
@@ -2106,6 +2139,7 @@ GameObject:
   - component: {fileID: 1777922302}
   - component: {fileID: 1777922301}
   - component: {fileID: 1777922300}
+  - component: {fileID: 1777922303}
   m_Layer: 5
   m_Name: deleteButton
   m_TagString: Untagged
@@ -2176,8 +2210,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1184283660}
-        m_MethodName: LoadCreateListScreen
+      - m_Target: {fileID: 1777922303}
+        m_MethodName: DeleteSpinnerButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2224,6 +2258,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1777922298}
   m_CullTransparentMesh: 0
+--- !u!114 &1777922303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777922298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68e9a75caa6cf47719f8a027be350737, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 1722686808}
+  createButton: {fileID: 0}
+  deleteButton: {fileID: 1777922300}
+  editButton: {fileID: 0}
+  saveButton: {fileID: 0}
+  addActivityButton: {fileID: 0}
+  titleField: {fileID: 0}
+  activityField: {fileID: 0}
+  storedSpinnerTitles: []
 --- !u!1 &1956924853
 GameObject:
   m_ObjectHideFlags: 0
