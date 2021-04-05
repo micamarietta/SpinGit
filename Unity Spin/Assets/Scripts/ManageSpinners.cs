@@ -18,6 +18,7 @@ public class ManageSpinners : MonoBehaviour
     // public Button removeActivityButton;
     public InputField titleField;
     public InputField activityField;
+    
 
     public List<CustomSpinner> allSpinners; // A dynamic list that stores all CustomSpinner objects
     public CustomSpinner curSpinner; // The current spinner that is either being created or editted
@@ -116,6 +117,7 @@ public class ManageSpinners : MonoBehaviour
         canvas = canvas.GetComponent<Canvas>();
         addActivityButton = addActivityButton.GetComponent<Button>();
         activityField = activityField.GetComponent<InputField>();
+
 
         // Note: just for the demo...
         curSpinner = new CustomSpinner();

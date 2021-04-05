@@ -55,13 +55,13 @@ public class SpinnerMechanics : MonoBehaviour
         return ActivityList[randomIndex];
     }
 
-    public IEnumerator OnSpinButtonClickDelay() //change back to public void if doesn't work
+    public IEnumerator OnSpinButtonClickDelay()
     {
         string randomActivity = GetRandomActivity();
 
 
         //display rectangles and text
-        yield return new WaitForSeconds(3); //new line
+        yield return new WaitForSeconds(3); 
         textRecBackground.SetActive(true);
         transRectangle.gameObject.SetActive(true);
         tapToExit.text = "Tap anywhere to exit";
