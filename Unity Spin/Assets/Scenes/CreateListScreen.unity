@@ -1549,6 +1549,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1184283659}
   - component: {fileID: 1184283660}
+  - component: {fileID: 1184283661}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -1583,6 +1584,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1bc4ee17fbbd4b078ffec3124c361de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1184283661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184283658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bdab4bf7d164684781857d5497b2123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curScene:
+    m_Handle: 0
+  canvas: {fileID: 1722686808}
+  titleField: {fileID: 0}
+  unsavedChanges: 0
 --- !u!1 &1221446221
 GameObject:
   m_ObjectHideFlags: 0
@@ -2595,7 +2613,6 @@ GameObject:
   - component: {fileID: 1737757935}
   - component: {fileID: 1737757934}
   - component: {fileID: 1737757933}
-  - component: {fileID: 1737757936}
   m_Layer: 5
   m_Name: createAttributeButton
   m_TagString: Untagged
@@ -2666,7 +2683,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1737757936}
+      - m_Target: {fileID: 0}
         m_MethodName: AddToSpinnerButton
         m_Mode: 1
         m_Arguments:
@@ -2714,18 +2731,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737757931}
   m_CullTransparentMesh: 0
---- !u!114 &1737757936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1737757931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68e9a75caa6cf47719f8a027be350737, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1759407750
 GameObject:
   m_ObjectHideFlags: 0

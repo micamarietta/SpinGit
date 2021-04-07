@@ -605,7 +605,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1266120110}
+      - m_Target: {fileID: 0}
         m_MethodName: OnExitButtonClick
         m_Mode: 1
         m_Arguments:
@@ -1106,7 +1106,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1161499110}
+      - m_Target: {fileID: 0}
         m_MethodName: EditSpinnerButton
         m_Mode: 1
         m_Arguments:
@@ -1163,18 +1163,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1161499105}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68e9a75caa6cf47719f8a027be350737, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ec4dcaec826fd64d89179acf28a00fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1722686808}
-  createButton: {fileID: 0}
-  deleteButton: {fileID: 0}
-  editButton: {fileID: 1161499107}
-  saveButton: {fileID: 0}
-  addActivityButton: {fileID: 0}
-  titleField: {fileID: 0}
-  activityField: {fileID: 0}
-  storedSpinnerTitles: []
 --- !u!1 &1184283658
 GameObject:
   m_ObjectHideFlags: 0
@@ -1297,8 +1288,8 @@ GameObject:
   - component: {fileID: 1266120109}
   - component: {fileID: 1266120108}
   - component: {fileID: 1266120107}
-  - component: {fileID: 1266120110}
   - component: {fileID: 1266120111}
+  - component: {fileID: 1266120110}
   m_Layer: 5
   m_Name: tempCircleButton
   m_TagString: Untagged
@@ -1426,14 +1417,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1266120105}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 291a925a686e04a88814fc6c71d17c50, type: 3}
+  m_Script: {fileID: 11500000, guid: dab677607a289f847b1a6a6940e3bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DisplayActivity: {fileID: 2097231683}
-  tapToExit: {fileID: 2025639797}
-  textRecBackground: {fileID: 1160286503}
-  ActivityList: []
-  transRectangle: {fileID: 582674262}
+  DisplayActivity: {fileID: 0}
+  tapToExit: {fileID: 0}
+  textRecBackground: {fileID: 0}
+  transRectangle: {fileID: 0}
 --- !u!114 &1266120111
 MonoBehaviour:
   m_ObjectHideFlags: 0
