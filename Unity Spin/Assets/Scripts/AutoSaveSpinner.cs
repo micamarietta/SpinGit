@@ -23,10 +23,9 @@ public class AutoSaveSpinner : MonoBehaviour
         {
             unsavedChanges = true;
             canvas = canvas.GetComponent<Canvas>();
-            // titleField = titleField.GetComponent<InputField>();
+            titleField = titleField.GetComponent<InputField>();
 
-            // ProfileManager.Instance.AutoChangePM(titleField.text);
-            ProfileManager.Instance.AutoChangePM("TestDemo");
+            ProfileManager.Instance.AutoChangePM(titleField.text);
         }
     }
 }

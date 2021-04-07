@@ -22,13 +22,13 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadDefaultSpinnerScript()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
         Debug.Log("Heading to the default spinner");
     }
 
     public void LoadCreateListScreen()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
         Debug.Log("Heading to the create list scene");
     }
 

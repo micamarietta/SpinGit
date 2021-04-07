@@ -13,8 +13,6 @@ public class ProfileManager : MonoBehaviour
     // [Sprint 4] TODO 6: Connect UIEditSpinner.cs to the button (needs button/image position)
     // [Sprint 4] TODO 7: Convert the spinner icon buttons to images (much like in Pablo's script)
 
-    // In case I accidentally overwrite Aviv's character limitation: https://github.com/micamarietta/SpinGit/commits?author=avivzohman2
-
     // Converts ProfileManager into a Singleton
     private static ProfileManager _instance;
     public static ProfileManager Instance { get { return _instance; } }
