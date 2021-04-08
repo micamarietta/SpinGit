@@ -18,15 +18,12 @@ public class Spinner
     public Spinner() // Default Constructor used for the creation of a new spinner
     {
         tmpActivities = new List<string>();
-        savedActivities = new string[100];
         title = "";
-        Debug.Log("succesfully created new spinner using default constructor");
     }
 
     public Spinner(string storedTitle) // Overloaded Constructor used to load stored spinners from PlayerPrefsX
     {
         tmpActivities = new List<string>();
-        savedActivities = new string[100];
         title = storedTitle;
 
         foreach (string activity in PlayerPrefsX.GetStringArray(title)) // Takes each activity from the PlayerPrefsX array and appends it to the tmpActivities List
@@ -39,18 +36,26 @@ public class Spinner
 
     public void SaveSpinner() // Stores the spinner into a PlayerPrefsX array
     {
+        savedActivities = new string[tmpActivities.Count];
+
         for (int i = 0; i < tmpActivities.Count; ++i) // Transfers the activities in the temporary List to the array that will be stored
         {
             savedActivities[i] = tmpActivities[i];
         }
 
-        PlayerPrefsX.SetStringArray(title, savedActivities); // Stores spinner in string format to a PlayerPrefsX array with the title acting as the "key"
-        tmpActivities.Clear(); // Nullifies the tmpActivities
+        for (int i = 0; i < savedActivities.Length; ++i)
+        {
+            Debug.Log("In SaveSpinner(): savedActivities[" + i + "] = " + savedActivities[i]);
+        }
 
+        PlayerPrefsX.SetStringArray(title, savedActivities); // Stores spinner in string format to a PlayerPrefsX array with the title acting as the "key"
+
+        /*
         for (int i = 0; i < PlayerPrefsX.GetStringArray(title).Length; ++i)
         {
             Debug.Log("'" + PlayerPrefsX.GetStringArray(title)[i] + "' saved at index " + i + " with the title: " + title);
         }
+        */
     }
 
     public void DeleteSpinner() // Nullifies the PlayerPrefsX array and removes the spinner title from the storedTitles PlayerPrefsX array
