@@ -19,12 +19,13 @@ public class ProfileManager : MonoBehaviour
 
     [SerializeField]
     public Spinner curSpinner; // The current spinner that is being acted upon
-    // TODO: Actually serialize the activeSpinners list
-    // https://answers.unity.com/questions/460727/how-to-serialize-dictionary-with-unity-serializati.html
+
     [SerializeField]
     public List<Spinner> activeSpinners; // The list of the active spinners in the app
+
     [SerializeField]
-    public bool unsavedChanges;
+    public bool unsavedChanges; // Tracks if any unsaved changes have been made to any spinners
+
     public string[] storedTitles; // The titles of the spinners that will be saved upon closing of the app
 
     private void Awake() // Allows only a single instance of this class
@@ -64,6 +65,7 @@ public class ProfileManager : MonoBehaviour
     public void CreateSpinnerPM() // Creates a new spinner
     {
         curSpinner = new Spinner(); // Uses the Default Constructor
+        curSpinner.tmpActivities.Add("");
         activeSpinners.Add(curSpinner); // Adds this version of curSpinner into the List
         curSpinner.gridPositionIndex = activeSpinners.Count - 1;
 
@@ -101,20 +103,9 @@ public class ProfileManager : MonoBehaviour
         // curSpinner = activeSpinners[tmpIndex];
     }
 
-    public void AddActivityPM(string activity)
-    {
-        curSpinner.AddActivity(activity);
-    }
-
     public void RemoveActivityPM(int index)
     {
         curSpinner.RemoveActivity(index);
-        // TODO: Debug
-    }
-
-    public void EditActivityPM(int index, string activity)
-    {
-        curSpinner.EditActivity(index, activity);
         // TODO: Debug
     }
 }

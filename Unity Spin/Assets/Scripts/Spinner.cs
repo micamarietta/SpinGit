@@ -40,7 +40,10 @@ public class Spinner
 
         for (int i = 0; i < tmpActivities.Count; ++i) // Transfers the activities in the temporary List to the array that will be stored
         {
-            savedActivities[i] = tmpActivities[i];
+            if (tmpActivities[i] != null)
+            {
+                savedActivities[i] = tmpActivities[i];
+            }
         }
 
         for (int i = 0; i < savedActivities.Length; ++i)
@@ -49,13 +52,6 @@ public class Spinner
         }
 
         PlayerPrefsX.SetStringArray(title, savedActivities); // Stores spinner in string format to a PlayerPrefsX array with the title acting as the "key"
-
-        /*
-        for (int i = 0; i < PlayerPrefsX.GetStringArray(title).Length; ++i)
-        {
-            Debug.Log("'" + PlayerPrefsX.GetStringArray(title)[i] + "' saved at index " + i + " with the title: " + title);
-        }
-        */
     }
 
     public void DeleteSpinner() // Nullifies the PlayerPrefsX array and removes the spinner title from the storedTitles PlayerPrefsX array
@@ -82,19 +78,9 @@ public class Spinner
         // 3) Return it back into ProfileManager.cs
     }
 
-    public void AddActivity(string activity) // Adds a new activity to the tmp list
-    {
-        tmpActivities.Add(activity);
-    }
-
     public void RemoveActivity(int index) // Removes an activity fromn the tmp list
     {
         tmpActivities.RemoveAt(index); // index - 1???
-    }
-
-    public void EditActivity(int index, string activity)
-    {
-        tmpActivities[index] = activity;
     }
 
     public string GetRandomActivity()
