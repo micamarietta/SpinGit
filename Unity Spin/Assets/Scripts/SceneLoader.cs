@@ -32,4 +32,10 @@ public class SceneLoader : MonoBehaviour
         Debug.Log("Heading to the create list scene");
     }
 
+    public void LoadEditListScreen()
+    {
+        SceneManager.LoadScene(4);
+        Debug.Log("Heading to edit list screen");
+    }
+
 }
