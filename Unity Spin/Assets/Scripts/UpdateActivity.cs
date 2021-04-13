@@ -13,13 +13,10 @@ public class UpdateActivity : MonoBehaviour
     void Update()
     {
         curScene = SceneManager.GetActiveScene();
-
-        // curField = curField.GetComponent<InputField>();
         
-        if (curScene.name == "CreateListScreen")
+        if (curScene.name == "CreateListScreen" || curScene.name == "EditListScreen")
         {
-            ProfileManager.Instance.curSpinner.tmpActivities[index] = curField.text;
-            Debug.Log("tmpActivities[" + index + "] = " + ProfileManager.Instance.curSpinner.tmpActivities[index]);
+            ProfileManager.Instance.curSpinner.tmpActivities[index] = curField.text; // Pulls the most current version of the text for the given activityField
         }
     }
 }

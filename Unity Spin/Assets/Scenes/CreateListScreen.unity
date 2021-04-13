@@ -2446,7 +2446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d6ed47ee34a00146867d3f34901dcd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstActivityFieldPrefab: {fileID: 7481202503019500034}
+  firstActivityPrefab: {fileID: 7481202503019500034}
   container: {fileID: 1221446222}
 --- !u!1 &1759407750
 GameObject:

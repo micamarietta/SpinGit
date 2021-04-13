@@ -9,15 +9,30 @@ public class AutoSaveSpinner : MonoBehaviour
     public Scene curScene;
     public Canvas canvas;
     public InputField titleField;
-
+    public Text titleDisplay;
+    
     void Update()
     {
         // PlayerPrefs.DeleteAll(); // Remember to leave the splash screen for this to work
 
-        Debug.Log("activeSpinners.Count = " + ProfileManager.Instance.activeSpinners.Count);
-
         curScene = SceneManager.GetActiveScene();
-        if (curScene.name == "MainScreen") // || curScene.name == "DefaultSpinnerScreen")
+
+        if (curScene.name != "MainScreen") // Any screen thats not the main screen means that the spinners are not being displayed
+        {
+            ProfileManager.Instance.spinnersDisplayed = false;
+        }
+
+        if (curScene.name != "EditListScreen") // Any screen thats not the edit list screen means that the data has not been loaded
+        {
+            ProfileManager.Instance.dataLoadedToEditScreen = false;
+        }
+
+        if (curScene.name == "DefaultSpinnerScreen") // Sets the title name in the deault spinner screen
+        {
+            titleDisplay.text = ProfileManager.Instance.curSpinner.title;
+        }
+
+        if (curScene.name == "MainScreen" || curScene.name == "DefaultSpinnerScreen")
         {
             if (ProfileManager.Instance.unsavedChanges) // If there are unsaved changes, then we need to save the data to their respective PlayerPrefsX arrays
             {
@@ -30,31 +45,29 @@ public class AutoSaveSpinner : MonoBehaviour
                         ProfileManager.Instance.activeSpinners[i].SaveSpinner(); // Stores the activities of the current spinner into a PlayerPrefsX array
 
                         ProfileManager.Instance.storedTitles[i] = ProfileManager.Instance.activeSpinners[i].title; // Grabs the titles of each of the active spinners and stores them in an array
-                        Debug.Log("'" + ProfileManager.Instance.storedTitles[i] + "' stored at index " + i + " in storedTitles");
                     }
                     PlayerPrefsX.SetStringArray("storedTitles", ProfileManager.Instance.storedTitles);
-                }
-                else
-                {
-                    Debug.Log("activeSpinners is empty!!!");
                 }
 
                 // TODO: Add a pop-up that will show to the user that the activeSpinners data has been saved (to PlayerPrefs)
 
                 ProfileManager.Instance.unsavedChanges = false;
             }
-            else
-            {
-                Debug.Log("No unsaved changes");
-            }
         }
-        else if (curScene.name == "CreateListScreen")
+        else if (curScene.name == "CreateListScreen" || curScene.name == "EditListScreen")
         {
             ProfileManager.Instance.unsavedChanges = true;
             canvas = canvas.GetComponent<Canvas>();
             titleField = titleField.GetComponent<InputField>();
 
-            ProfileManager.Instance.curSpinner.title = titleField.text; // Pass in the title to keep up to date with it
+            if (curScene.name == "EditListScreen" && titleField.text != "")
+            {
+                ProfileManager.Instance.curSpinner.title = titleField.text; // Pass in the title to keep up to date with it
+            }
+            else if (curScene.name == "CreateListScreen")
+            {
+                ProfileManager.Instance.curSpinner.title = titleField.text; // Pass in the title to keep up to date with it
+            }
 
             // Compare curSpinner the spinner stored in activeSpinners
             // Automatically save any changes that are different once found
@@ -66,7 +79,6 @@ public class AutoSaveSpinner : MonoBehaviour
                     {
                         // Update the title of the spinner in the activeSpinners list to that of curSpinner's
                         oldSpinner.title = ProfileManager.Instance.curSpinner.title;
-
                     }
 
                     if (oldSpinner.tmpActivities.Count < ProfileManager.Instance.curSpinner.tmpActivities.Count) // curSpinner is larger, which means that activities have been added

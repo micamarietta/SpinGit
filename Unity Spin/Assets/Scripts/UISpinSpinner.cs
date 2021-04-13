@@ -21,7 +21,7 @@ public class UISpinSpinner : MonoBehaviour
         transRectangle.gameObject.SetActive(false);
     }
 
-    public IEnumerator OnSpinButtonClickDelay() //Change back to public void if doesn't work
+    public IEnumerator OnSpinButtonClickDelay()
     {
         // Display rectangles and text
         yield return new WaitForSeconds(2); // New line

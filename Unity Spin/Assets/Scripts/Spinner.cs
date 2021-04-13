@@ -11,9 +11,7 @@ public class Spinner
     public List<string> tmpActivities; // A temporary list of activities that the user can freely edit
     public string[] savedActivities; // The list of activities that will be stored on the closing of the app
     public string title; // The title of the spinner which will be used as a "key" for the PlayerPrefsX array
-    public int gridPositionIndex;
-    public int posX;
-    public int posY;
+    public int gridPositionIndex; // The index of the spinner in the activeSpinners list
 
     public Spinner() // Default Constructor used for the creation of a new spinner
     {
@@ -29,9 +27,7 @@ public class Spinner
         foreach (string activity in PlayerPrefsX.GetStringArray(title)) // Takes each activity from the PlayerPrefsX array and appends it to the tmpActivities List
         {
             tmpActivities.Add(activity);
-            Debug.Log("loaded '" + activity + "' at index " + (tmpActivities.Count - 1));
         }
-        Debug.Log("succesfully loaded spinner using overloaded constructor, title: " + title);
     }
 
     public void SaveSpinner() // Stores the spinner into a PlayerPrefsX array
@@ -46,41 +42,17 @@ public class Spinner
             }
         }
 
-        for (int i = 0; i < savedActivities.Length; ++i)
-        {
-            Debug.Log("In SaveSpinner(): savedActivities[" + i + "] = " + savedActivities[i]);
-        }
-
         PlayerPrefsX.SetStringArray(title, savedActivities); // Stores spinner in string format to a PlayerPrefsX array with the title acting as the "key"
     }
 
     public void DeleteSpinner() // Nullifies the PlayerPrefsX array and removes the spinner title from the storedTitles PlayerPrefsX array
     {
-        PlayerPrefsX.SetStringArray(title, null); // Nullifies the array stored with the given title keyword
-        Debug.Log("succesfully nullified array in array array");
-
-        for (int i = 0; i < PlayerPrefsX.GetStringArray("storedTitles").Length; ++i) // Cycles through the PlayerPrefsX that stores all of the titles
-        {
-            if (PlayerPrefsX.GetStringArray("storedSpinnerTitles")[i] == title) // Nullifies the title found in the PlayerPrefsX
-            {
-                PlayerPrefsX.GetStringArray("storedSpinnerTitles")[i] = null;
-                Debug.Log("succesfully nullified title in title array");
-                break;
-            }
-        }
-    }
-
-    public void EditSpinner() // Brings up the CreateNewSpinner Scene but has the loaded data
-    {
-        // How this may work...
-        // 1) Pass in the UI property ("scrollable table" or whatever Pablo said it was called)
-        // 2) Fill it in with the tmpActivities List
-        // 3) Return it back into ProfileManager.cs
+        PlayerPrefs.DeleteAll();
     }
 
     public void RemoveActivity(int index) // Removes an activity fromn the tmp list
     {
-        tmpActivities.RemoveAt(index); // index - 1???
+        tmpActivities.RemoveAt(index);
     }
 
     public string GetRandomActivity()
