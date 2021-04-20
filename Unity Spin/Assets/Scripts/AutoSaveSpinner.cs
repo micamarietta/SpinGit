@@ -42,6 +42,8 @@ public class AutoSaveSpinner : MonoBehaviour
 
                     for (int i = 0; i < ProfileManager.Instance.activeSpinners.Count; ++i)
                     {
+                        ProfileManager.Instance.activeSpinners[i].gridPositionIndex = i; // Updates the index if a spinner is deleted or created
+
                         ProfileManager.Instance.activeSpinners[i].SaveSpinner(); // Stores the activities of the current spinner into a PlayerPrefsX array
 
                         ProfileManager.Instance.storedTitles[i] = ProfileManager.Instance.activeSpinners[i].title; // Grabs the titles of each of the active spinners and stores them in an array
