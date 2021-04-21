@@ -5,18 +5,13 @@ using UnityEngine.UI;
 
 public class UIRemoveActivity : MonoBehaviour
 {
-    /*
-    public Canvas canvas;
-    public Button removeActivityButton;
-
-    // [Sprint 4] TODO 4:
+    public Button removeButton;
+    public GameObject activityPrefab;
 
     public void RemoveActivityButton()
     {
-        canvas = canvas.GetComponent<Canvas>();
-        removeActivityButton = removeActivityButton.GetComponent<Button>();
+        string tmpActivity = activityPrefab.transform.GetComponentInChildren<Text>().text;
 
-        ProfileManager.Instance.RemoveActivityPM(); // Need to pass in an int for index... or should it be the activity??
+        ProfileManager.Instance.RemoveActivityPM(tmpActivity);
     }
-    */
 }

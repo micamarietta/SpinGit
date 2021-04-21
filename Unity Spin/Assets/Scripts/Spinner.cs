@@ -50,9 +50,9 @@ public class Spinner
         PlayerPrefs.DeleteAll();
     }
 
-    public void RemoveActivity(int index) // Removes an activity fromn the tmp list
+    public void RemoveActivity(string tmpActivity) // Removes an activity fromn the tmp list
     {
-        tmpActivities.RemoveAt(index);
+        tmpActivities.Remove(tmpActivity);
     }
 
     public string GetRandomActivity()

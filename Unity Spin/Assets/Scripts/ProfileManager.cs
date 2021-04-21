@@ -73,8 +73,8 @@ public class ProfileManager : MonoBehaviour
         unsavedChanges = true;
     }
 
-    public void RemoveActivityPM(int index)
+    public void RemoveActivityPM(string tmpActivity)
     {
-        curSpinner.RemoveActivity(index);
+        curSpinner.RemoveActivity(tmpActivity);
     }
 }
