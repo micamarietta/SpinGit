@@ -1467,6 +1467,7 @@ MonoBehaviour:
     m_Handle: 0
   canvas: {fileID: 1722686808}
   titleField: {fileID: 1232192970}
+  titleDisplay: {fileID: 0}
 --- !u!1 &1221446221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1659,7 +1660,7 @@ MonoBehaviour:
   m_LineType: 0
   m_HideMobileInput: 0
   m_CharacterValidation: 0
-  m_CharacterLimit: 0
+  m_CharacterLimit: 18
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []

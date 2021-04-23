@@ -858,6 +858,7 @@ MonoBehaviour:
     m_Handle: 0
   canvas: {fileID: 0}
   titleField: {fileID: 0}
+  titleDisplay: {fileID: 0}
 --- !u!1 &1260266283
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,7 +1014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 150
+    m_Left: 120
     m_Right: 0
     m_Top: 200
     m_Bottom: 0
