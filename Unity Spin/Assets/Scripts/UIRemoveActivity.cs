@@ -5,18 +5,24 @@ using UnityEngine.UI;
 
 public class UIRemoveActivity : MonoBehaviour
 {
-    /*
-    public Canvas canvas;
-    public Button removeActivityButton;
+    public Button removeButton;
+    public GameObject activityPrefab;
 
-    // [Sprint 4] TODO 4:
+    [SerializeField]
+    public int remIndex;
 
     public void RemoveActivityButton()
     {
-        canvas = canvas.GetComponent<Canvas>();
-        removeActivityButton = removeActivityButton.GetComponent<Button>();
+        string remActivity = activityPrefab.transform.GetComponentInChildren<InputField>().text;
 
-        ProfileManager.Instance.RemoveActivityPM(); // Need to pass in an int for index... or should it be the activity??
+        // FindIndex doesn't allow strings; it only allows "predicates". So this is a way to convert the string into a "predicate"
+        remIndex = ProfileManager.Instance.curSpinner.tmpActivities.FindIndex(searchString => searchString == activityPrefab.transform.GetComponentInChildren<InputField>().text);
+        activityPrefab.transform.GetComponentInChildren<UpdateActivity>().updateIndex = remIndex;
+
+        ProfileManager.Instance.RemoveActivityPM(remActivity);
+
+        ProfileManager.Instance.removedActivity = true;
+
+        Destroy(activityPrefab);
     }
-    */
 }

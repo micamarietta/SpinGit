@@ -32,14 +32,16 @@ public class Spinner
 
     public void SaveSpinner() // Stores the spinner into a PlayerPrefsX array
     {
+        do // Do-While Loop to remove any empty strings in the activities list before saving it
+        {
+            tmpActivities.Remove("");
+        } while (tmpActivities.Contains(""));
+
         savedActivities = new string[tmpActivities.Count];
 
         for (int i = 0; i < tmpActivities.Count; ++i) // Transfers the activities in the temporary List to the array that will be stored
         {
-            if (tmpActivities[i] != null)
-            {
-                savedActivities[i] = tmpActivities[i];
-            }
+            savedActivities[i] = tmpActivities[i];
         }
 
         PlayerPrefsX.SetStringArray(title, savedActivities); // Stores spinner in string format to a PlayerPrefsX array with the title acting as the "key"
@@ -50,13 +52,13 @@ public class Spinner
         PlayerPrefs.DeleteAll();
     }
 
-    public void RemoveActivity(int index) // Removes an activity fromn the tmp list
+    public void RemoveActivity(string remActivity) // Removes an activity fromn the tmp list
     {
-        tmpActivities.RemoveAt(index);
+        tmpActivities.Remove(remActivity);
     }
 
     public string GetRandomActivity()
     {
-        return tmpActivities[UnityEngine.Random.Range(0, tmpActivities.Count)]; // Picks random index from 0 to tmpActivities.Count
+        return savedActivities[UnityEngine.Random.Range(0, savedActivities.Length)]; // Picks random index from 0 to tmpActivities.Count
     }
 }

@@ -312,8 +312,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 5, y: -10}
+  m_SizeDelta: {x: -10, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &145710693
 MonoBehaviour:
@@ -1989,8 +1989,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 5, y: -10}
+  m_SizeDelta: {x: -10, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1703211609
 MonoBehaviour:
@@ -2488,9 +2488,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d6ed47ee34a00146867d3f34901dcd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstActivityPrefab: {fileID: 7481202504665303730, guid: 4d9eb23c2579d934997fb21a2c4e1167,
-    type: 3}
   container: {fileID: 1221446222}
+  addButton: {fileID: 1737757933}
 --- !u!1 &1759407750
 GameObject:
   m_ObjectHideFlags: 0

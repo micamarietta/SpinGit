@@ -9,6 +9,6 @@ public class SelectSpinner : MonoBehaviour
 
     public void SelectSpinnerButton() // This is called upon clicking on the spinnerIcon prefab
     {
-        ProfileManager.Instance.curSpinner = ProfileManager.Instance.activeSpinners[thisSpinnerButton.GetComponent<TrackIndex>().index];
+        ProfileManager.Instance.curSpinner = ProfileManager.Instance.activeSpinners[thisSpinnerButton.GetComponent<TrackSpinnerIndex>().index];
     }
 }

@@ -10,11 +10,9 @@ public class AutoSaveSpinner : MonoBehaviour
     public Canvas canvas;
     public InputField titleField;
     public Text titleDisplay;
-    
+
     void Update()
     {
-        // PlayerPrefs.DeleteAll(); // Remember to leave the splash screen for this to work
-
         curScene = SceneManager.GetActiveScene();
 
         if (curScene.name != "MainScreen") // Any screen thats not the main screen means that the spinners are not being displayed

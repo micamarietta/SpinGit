@@ -19,9 +19,10 @@ public class LoadSpinnerIcons : MonoBehaviour
             for (int i = 0; i < ProfileManager.Instance.activeSpinners.Count; ++i)
             {
                 GameObject clonedSpinnerIcon = Instantiate(Resources.Load("Prefabs/spinnerIcon")) as GameObject; // Instantiates the spinnerIcon prefab
+
                 clonedSpinnerIcon.transform.SetParent(container.transform); // Places this new prefab within the contain heirarchy
                 clonedSpinnerIcon.transform.GetComponentInChildren<Text>().text = ProfileManager.Instance.activeSpinners[i].title; // Sets the text of the new button prefab
-                clonedSpinnerIcon.transform.GetChild(0).GetComponent<TrackIndex>().index = i;
+                clonedSpinnerIcon.transform.GetChild(0).GetComponent<TrackSpinnerIndex>().index = i;
             }
 
             ProfileManager.Instance.spinnersDisplayed = true; // The spinners are now displayed

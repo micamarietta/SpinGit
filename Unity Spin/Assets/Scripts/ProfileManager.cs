@@ -16,13 +16,19 @@ public class ProfileManager : MonoBehaviour
     public List<Spinner> activeSpinners; // The list of the active spinners in the app
 
     [SerializeField]
-    public bool unsavedChanges; // Tracks if any unsaved changes have been made to any spinners
+    public bool unsavedChanges; // Tracks if any unsaved changes have been made to any spinners (default is false)
 
     [SerializeField]
-    public bool spinnersDisplayed; // Tracks if the spinners are displayed on the main menu screen
+    public bool spinnersDisplayed; // Tracks if the spinners are displayed on the main menu screen (default is false)
 
     [SerializeField]
-    public bool dataLoadedToEditScreen; // Tracks if the data has been loaded into the edit screen
+    public bool dataLoadedToEditScreen; // Tracks if the data has been loaded into the edit screen (default is false)
+
+    [SerializeField]
+    public bool removedActivity; // Tracks if an activity has been removed (default is false)
+
+    [SerializeField]
+    public bool spinnerActivated; // Tracks if the spinner was clicked (default is false)
 
     public string[] storedTitles; // The titles of the spinners that will be saved upon closing of the app
 
@@ -73,8 +79,8 @@ public class ProfileManager : MonoBehaviour
         unsavedChanges = true;
     }
 
-    public void RemoveActivityPM(int index)
+    public void RemoveActivityPM(string remActivity)
     {
-        curSpinner.RemoveActivity(index);
+        curSpinner.RemoveActivity(remActivity);
     }
 }
