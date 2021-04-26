@@ -681,7 +681,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 582674265}
-        m_MethodName: OnExitButtonClick
+        m_MethodName: ExitButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -737,9 +737,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 582674260}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dab677607a289f847b1a6a6940e3bc02, type: 3}
+  m_Script: {fileID: 11500000, guid: a25ad1e2087a04cef953f65a7604bcab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotSpeed: 0
+  spinnerButton: {fileID: 1266120105}
   DisplayActivity: {fileID: 2097231683}
   tapToExit: {fileID: 2025639797}
   textRecBackground: {fileID: 1160286503}
@@ -1607,7 +1609,6 @@ GameObject:
   - component: {fileID: 1266120108}
   - component: {fileID: 1266120107}
   - component: {fileID: 1266120111}
-  - component: {fileID: 1266120110}
   m_Layer: 5
   m_Name: tempCircleButton
   m_TagString: Untagged
@@ -1678,8 +1679,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1266120110}
-        m_MethodName: OnSpinButtonClick
+      - m_Target: {fileID: 1266120111}
+        m_MethodName: SpinButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1726,22 +1727,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266120105}
   m_CullTransparentMesh: 0
---- !u!114 &1266120110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1266120105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dab677607a289f847b1a6a6940e3bc02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DisplayActivity: {fileID: 2097231683}
-  tapToExit: {fileID: 2025639797}
-  textRecBackground: {fileID: 1160286503}
-  transRectangle: {fileID: 582674262}
 --- !u!114 &1266120111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1754,7 +1739,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25ad1e2087a04cef953f65a7604bcab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotSpeed: 0
   spinnerButton: {fileID: 1266120105}
+  DisplayActivity: {fileID: 2097231683}
+  tapToExit: {fileID: 2025639797}
+  textRecBackground: {fileID: 1160286503}
+  transRectangle: {fileID: 582674262}
 --- !u!1 &1718244696
 GameObject:
   m_ObjectHideFlags: 0

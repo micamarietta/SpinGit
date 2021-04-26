@@ -7,7 +7,7 @@ public class UIDeleteSpinner : MonoBehaviour
 {
     public Button deleteButton;
 
-    public void DeleteSpinnerButton()
+    public void DeleteSpinnerButton() // Calls the profile manager to delete an existing spinner
     {
         ProfileManager.Instance.DeleteSpinnerPM();
     }

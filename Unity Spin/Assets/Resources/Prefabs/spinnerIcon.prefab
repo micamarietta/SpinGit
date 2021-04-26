@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 7721502261822763809}
   - component: {fileID: 7721502261822763814}
   - component: {fileID: 3987067426947480470}
-  - component: {fileID: 6199991371992996711}
   - component: {fileID: 1167721251266912830}
+  - component: {fileID: 342848452573346079}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -156,19 +156,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1bc4ee17fbbd4b078ffec3124c361de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6199991371992996711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7721502261822763812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1158db063815ee24084675f0fb9c0ce8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: 0
 --- !u!114 &1167721251266912830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,6 +169,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisSpinnerButton: {fileID: 7721502261822763814}
+--- !u!114 &342848452573346079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7721502261822763812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff697f5428c6dd24ebb30cd898da1ec3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
 --- !u!1 &7721502262354285967
 GameObject:
   m_ObjectHideFlags: 0

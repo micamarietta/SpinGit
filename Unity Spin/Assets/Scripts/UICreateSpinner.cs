@@ -5,14 +5,10 @@ using UnityEngine.UI;
 
 public class UICreateSpinner : MonoBehaviour
 {
-    public Canvas canvas;
     public Button createButton;
 
-    public void CreateSpinnerButton()
+    public void CreateSpinnerButton() // Calls the profile manager to create a new spinner
     {
-        canvas = canvas.GetComponent<Canvas>();
-        createButton = createButton.GetComponent<Button>();
-
         ProfileManager.Instance.CreateSpinnerPM();
     }
 }

@@ -24,6 +24,7 @@ public class LoadSpinnerEdits : MonoBehaviour
                 curActivityPrefab.transform.SetParent(container.transform); // Places this new prefab within the contain heirarchy
 
                 // Fills curActivityPrefab with the text from the activities in curSpinner
+                curActivityPrefab.transform.GetChild(0).GetComponentInChildren<UpdateActivity>().index = i;
                 curActivityPrefab.transform.GetChild(0).GetComponent<InputField>().text = ProfileManager.Instance.curSpinner.tmpActivities[i];
             }
 
