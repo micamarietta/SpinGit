@@ -10,6 +10,7 @@ public class AutoSaveSpinner : MonoBehaviour
     public Canvas canvas;
     public InputField titleField;
     public Text titleDisplay;
+    public List<string> tmpTitles = new List<string>(); // A temporary list of titles that acts as the buffer before saving the titles
 
     void Update()
     {
@@ -34,22 +35,52 @@ public class AutoSaveSpinner : MonoBehaviour
         {
             if (ProfileManager.Instance.unsavedChanges) // If there are unsaved changes, then we need to save the data to their respective PlayerPrefsX arrays
             {
-                if (ProfileManager.Instance.activeSpinners.Count != 0) // Checks if there is at least one active spinner in the app
+                if (ProfileManager.Instance.activeSpinners.Count > 0) // Checks if there is at least one active spinner in the app
                 {
-                    ProfileManager.Instance.storedTitles = new string[ProfileManager.Instance.activeSpinners.Count]; // Sets the size of the storedTitles array that needs to be saved
-
                     for (int i = 0; i < ProfileManager.Instance.activeSpinners.Count; ++i)
                     {
-                        ProfileManager.Instance.activeSpinners[i].gridPositionIndex = i; // Updates the index if a spinner is deleted or created
-
                         ProfileManager.Instance.activeSpinners[i].SaveSpinner(); // Stores the activities of the current spinner into a PlayerPrefsX array
 
-                        ProfileManager.Instance.storedTitles[i] = ProfileManager.Instance.activeSpinners[i].title; // Grabs the titles of each of the active spinners and stores them in an array
-                    }
-                    PlayerPrefsX.SetStringArray("storedTitles", ProfileManager.Instance.storedTitles);
-                }
+                        if (!ProfileManager.Instance.activeSpinners[i].activitiesEmpty && !ProfileManager.Instance.activeSpinners[i].titleEmpty) // Only adds the spinner if it has a title and its tmpActivities list is not empty
+                        {
+                            tmpTitles.Add(ProfileManager.Instance.activeSpinners[i].title);
 
-                // TODO: Add a pop-up that will show to the user that the activeSpinners data has been saved (to PlayerPrefs)
+                            ProfileManager.Instance.activeSpinners[i].gridPositionIndex = i; // Updates the index if a spinner is deleted or created
+                        }
+                        else // Removes the spinner from the activeSpinners list if it does not have a title or has an empty tmpActivities list
+                        {
+                            ProfileManager.Instance.activeSpinners.RemoveAt(i);
+                            --i;
+                            /*
+                            if (ProfileManager.Instance.activeSpinners[i].titleEmpty)
+                            {
+                                // TODO: Display a message that says "A spinner was removed because it had a missing title"
+                            }
+                            else if (ProfileManager.Instance.activeSpinners[i].activitiesEmpty)
+                            {
+                                // TODO: Display a message that says "A spinner was removed because it contained no activities"
+                            }
+                            */
+                        }
+                    }
+
+                    while (tmpTitles.Contains("")) // Removes all empty titles from the tmpTitles list
+                    {
+                        tmpTitles.Remove("");
+                    }
+
+                    ProfileManager.Instance.storedTitles = new string[tmpTitles.Count]; // Sets the size of the storedTitles array that needs to be saved
+
+                    for (int i = 0; i < tmpTitles.Count; ++i)
+                    {
+                        ProfileManager.Instance.storedTitles[i] = tmpTitles[i]; // Grabs the titles of each of the active spinners and stores them in an array
+                    }
+
+                    if (ProfileManager.Instance.storedTitles.Length > 0)
+                    {
+                        PlayerPrefsX.SetStringArray("storedTitles", ProfileManager.Instance.storedTitles);
+                    }
+                }
 
                 ProfileManager.Instance.unsavedChanges = false;
             }
