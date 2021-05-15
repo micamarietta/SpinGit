@@ -1199,6 +1199,7 @@ MonoBehaviour:
   canvas: {fileID: 1722686808}
   titleField: {fileID: 1232192970}
   titleDisplay: {fileID: 0}
+  tmpTitles: []
 --- !u!1 &1221446221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,7 +1289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 45
+    m_Left: 80
     m_Right: 0
     m_Top: 80
     m_Bottom: 0
@@ -2500,25 +2501,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1221446222}
     m_Modifications:
+    - target: {fileID: 2121673076491484386, guid: 4d9eb23c2579d934997fb21a2c4e1167,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 91.13977
+      objectReference: {fileID: 0}
+    - target: {fileID: 2121673076491484386, guid: 4d9eb23c2579d934997fb21a2c4e1167,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.632
+      objectReference: {fileID: 0}
     - target: {fileID: 6970688402606920920, guid: 4d9eb23c2579d934997fb21a2c4e1167,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 467.4171
+      value: 423.44354
       objectReference: {fileID: 0}
     - target: {fileID: 6970688402606920920, guid: 4d9eb23c2579d934997fb21a2c4e1167,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 93.682526
+      value: 87.875854
       objectReference: {fileID: 0}
     - target: {fileID: 6970688402606920920, guid: 4d9eb23c2579d934997fb21a2c4e1167,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -216.3
+      value: -211.72
       objectReference: {fileID: 0}
     - target: {fileID: 6970688402606920920, guid: 4d9eb23c2579d934997fb21a2c4e1167,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 28.2
+      value: 31.1
       objectReference: {fileID: 0}
     - target: {fileID: 7481202504665303730, guid: 4d9eb23c2579d934997fb21a2c4e1167,
         type: 3}
@@ -2574,6 +2585,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7481202504665303731, guid: 4d9eb23c2579d934997fb21a2c4e1167,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1111112
+      objectReference: {fileID: 0}
+    - target: {fileID: 7481202504665303731, guid: 4d9eb23c2579d934997fb21a2c4e1167,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1111112
+      objectReference: {fileID: 0}
+    - target: {fileID: 7481202504665303731, guid: 4d9eb23c2579d934997fb21a2c4e1167,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1111112
       objectReference: {fileID: 0}
     - target: {fileID: 7481202504665303731, guid: 4d9eb23c2579d934997fb21a2c4e1167,
         type: 3}
