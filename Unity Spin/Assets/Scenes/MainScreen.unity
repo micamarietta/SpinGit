@@ -681,7 +681,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 768635728}
   m_Direction: 2
   m_Value: 0.99999994
-  m_Size: 0.32637298
+  m_Size: 0.32637408
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -808,6 +808,7 @@ GameObject:
   - component: {fileID: 1184283659}
   - component: {fileID: 1184283660}
   - component: {fileID: 1184283661}
+  - component: {fileID: 1184283662}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -859,6 +860,20 @@ MonoBehaviour:
   canvas: {fileID: 0}
   titleField: {fileID: 0}
   titleDisplay: {fileID: 0}
+  tmpTitles: []
+--- !u!114 &1184283662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184283658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1ff3063b3e5c814f930b28f4bba3912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  createSpinner: {fileID: 1737757933}
 --- !u!1 &1260266283
 GameObject:
   m_ObjectHideFlags: 0

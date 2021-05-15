@@ -856,8 +856,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 594346465}
   m_HandleRect: {fileID: 594346464}
   m_Direction: 2
-  m_Value: 0.99999535
-  m_Size: 0.27591655
+  m_Value: 0.9999953
+  m_Size: 0.27591658
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1199,6 +1199,7 @@ MonoBehaviour:
   canvas: {fileID: 1722686808}
   titleField: {fileID: 1232192970}
   titleDisplay: {fileID: 0}
+  tmpTitles: []
 --- !u!1 &1221446221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1388,7 +1389,7 @@ MonoBehaviour:
   m_LineType: 0
   m_HideMobileInput: 0
   m_CharacterValidation: 0
-  m_CharacterLimit: 0
+  m_CharacterLimit: 18
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
