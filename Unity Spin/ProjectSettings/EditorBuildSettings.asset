@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CreateListScreen.unity
     guid: 0bed3d43540c748df8282c13cde8573b
+  - enabled: 1
+    path: Assets/Scenes/EditListScreen.unity
+    guid: bd4cdf9fc8a7a42588d16d2c02b41d86
   m_configObjects: {}
