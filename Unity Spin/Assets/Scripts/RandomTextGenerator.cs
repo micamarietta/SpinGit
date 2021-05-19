@@ -15,8 +15,6 @@ public class RandomTextGenerator : MonoBehaviour
         "The pocket spinner",
         "The wheel of spontaneity",
         "Woah, I'm getting dizzy",
-        "Way better than rock paper scissors",
-        "Hi Prate!",
         "Wheel of Fortune has nothing on us",
     });
 
